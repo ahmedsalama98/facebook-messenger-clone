@@ -1,38 +1,91 @@
-.App {
+
+*{
+  box-sizing: border-box;
+}
+h1{
   text-align: center;
+  
+}
+.message-app{
+  padding-bottom: 60px;
+  background: fff;
+
+}
+.message-app img{
+  display: block;
+  margin: 20px auto;
+  position: relative;
+}
+.new-messege-area{
+  width: 100%;
+  padding: 15px  0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #eee;
+  z-index: 1;
+  box-shadow: 0 0 12px #474545;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.new-messege-area input{
+  width: 500px ;
+  height: 40px;
+  font-size: 20px;
+  text-indent: 5px;
+  position: relative;
+}
+.new-messege-area button{
+  height: 50px;
+  font-size: 20px;
+  width: max-content;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translatey(-50%);
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.messeges-box{
+  padding: 40px 0;
+}
+.messeges-box  .message {
+  margin-bottom: 20px;
+}
+.messeges-box  .message p{
+  background: #000000;
+  width: max-content;
+  max-width: 50%;
+  padding: 10px;
+  color: #efefef;
+  font-size: 20px;
+  border-radius: 10px;
+  line-height: 2rem;
+  text-align: justify;
+
+}
+.messeges-box  .message span{
+font-size: 14px;
+}
+.messeges-box  .message.user-message {
+  
+  margin-left: auto !important;
+  text-align: right;
+}
+.messeges-box  .message.user-message p{ 
+  background: #01579b !important;
+  margin-left: auto;
+  text-align: justify;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width:991px){
+  .new-messege-area input{
+    width: 100% !important;
+    margin-bottom: 10px;
+  } 
+  .messeges-box  .message p{
+    max-width: 100%;
   }
 }
